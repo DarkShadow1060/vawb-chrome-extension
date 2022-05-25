@@ -1,8 +1,12 @@
+/** ------- Tab management commands ------- */
+// Some Commands will be performed after a delay
+
 import { performActionWithDelay } from '../core';
+
+// to check the actions: go to src/js/langs/en.json
 
 const commands = [
   {
-    /** ------- Tab management commands ------- */
     action: 'TABS_NEW_TAB',
     callback: () => {
       performActionWithDelay(() => {
@@ -214,7 +218,13 @@ const commands = [
       });
     }
   },
-
+  {
+    action: 'INCOGNITO_WINDOW',
+    callback: () => {
+      chrome.windows.create({incognito: true});
+    }
+  }
+  ,
   {
     action: 'TABS_MINIMIZE_WINDOW',
     callback: () => {

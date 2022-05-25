@@ -1,3 +1,10 @@
+/*
+  
+  the Index from where each plugins can be accessed 
+  easily .
+
+*/
+
 import bookmark from './bookmark';
 import extension from './extension';
 import media from './media';
